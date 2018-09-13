@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <title>Feed Post</title>
+
+    <style>
+        #saveEditBtn {
+            display: none;
+        }
+
+        #mId {
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#home" class="brand-logo">
+                        <span class="logo">W</span>
+                        <span class="logo2">Developer</span>
+                    </a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse show-on-large right">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="home.html">
+                                <span>
+                                    <i class="material-icons ">home</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="courses.html">Courses</a>
+                        </li>
+                        <li>
+                            <a href="contact.html?#about">About us</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html?#contact">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="posts.html">
+                                Posts
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="myaccount.html">
+                                <span>
+                                    <i class="material-icons">account_circle</i>
+
+                                </span>
+                            </a>
+
+                        </li>
+                        <li style="text-align: center; padding-top: 8px;">
+                            <a href="myaccount.html">
+                                <img src="" id="pic-user" alt="" style="border-radius: 50%; height: 50px; z-index: -1;">
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <ul class="side-nav" id="mobile-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <div class="col s12 m12">
+                        <img src="#" alt="" width="100%" id="pic-user2" style="border-radius:0px; padding: 0px">
+                        <a href="#" id="fullNam" style="color:white;margin:0px;">
+                        </a>
+                    </div>
+                    <em id="cdx"></em>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </li>
+        <li>
+
+            <a href="home.html">
+                <span>
+                    <i class="material-icons teal-text">home</i> Home
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="courses.html">
+                <span>
+                    <i class="material-icons teal-text">business_center</i> Courses
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="contact.html?#about">
+                <span>
+                    <i class="material-icons teal-text">question_answer</i>
+                    About Us
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html?#contact">
+                <span>
+                    <i class="material-icons teal-text">email</i>
+                    Contact
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="posts.html">
+                <span>
+                    <i class="material-icons teal-text">chat</i>
+                    Posts
+                </span>
+
+            </a>
+
+        </li>
+
+        <li>
+            <a href="myaccount.html">
+                <span>
+                    <i class="material-icons teal-text">account_circle</i>
+                    My Account
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <div class="user-view">
+                <div class="">
+                    <div class="col s12 m12">
+
+                    </div>
+                </div>
+        </li>
+    </ul>
+
+
+    <!-- Section Main-->
+
+
+
+    <div class="container">
+
+
+        <div class="card">
+            <!-- add user module -->
+            <section id="add-post-module">
+                <!--  <button id="open-add-user-form-btn">+</button> -->
+                <form>
+                    <h2>Add Post</h2>
+                    <!--
+  Title:
+          <br>
+          <input type='text' data-key='title' class='post-input' id="title">
+          <br> Desc:
+          <br>
+          <input type='text' data-key='desc' class='desc-input' id="desc">
+          <br>
+
+          -->
+
+                    <div class="row">
+                        <div class="input-field col s6">
+
+                            <input id="author" type="text" class="validate" required>
+                            <label for="author">Author</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+
+                            <input id="gravatar" type="text" class="validate">
+                            <label for="gravatar">MyGravatar Link</label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="input-field col s6">
+
+                            <input id="title" type="text" class="validate" required>
+                            <label for="title">Title</label>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+
+                            <input id="linkvideo" type="text" class="validate">
+                            <label for="linkvideo">Video Link</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="desc" class="materialize-textarea" required></textarea>
+                            <label for="desc">Description</label>
+                        </div>
+                    </div>
+
+
+                    <input type='button' id="addPostBtn" class="btn blue" value="Add Post" />
+                    <input type='button' id="saveEditBtn" class="btn orange" value="Save Edition" />
+                </form>
+            </section>
+
+        </div>
+
+
+
+        <div>
+            <ul id="post-list" class="collection">
+
+
+            </ul>
+
+
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="section teal darken-2 white-text center">
+            <p class="flow-text" style="text-align: center">Web Developer (TD) &copy; 2018</p>
+        </footer>
+
+
+
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../js/materialize.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script src="../js/posts.js"></script>
+        <script>
+            $(document).ready(function () {
+
+
+                // Init Side nav
+                $('.button-collapse').sideNav();
+
+
+
+                $('#pic-user').attr('src', localStorage.getItem('pic'));
+                $('#pic-user2').attr('src', localStorage.getItem('pic'));
+
+
+
+
+            });
+
+
+            // Firebase Database Reference and the child
+            const dbRef = firebase.database().ref();
+            const postsRef = dbRef.child('posts');
+
+            const btnAddPost = document.querySelector('#addPostBtn');
+            const btnSaveEdit = document.querySelector('#saveEditBtn');
+
+            const postList = document.querySelector('.collection');
+
+            //postList.addEventListener('click', removePost);
+
+            masterKey = '';
+
+            function iniciar() {
+
+
+
+                const frm = document.querySelector('#add-post-module');
+                const author = document.querySelector('#author');
+                const gravatar = document.querySelector('#gravatar');
+                const title = document.querySelector('#title');
+                const linkvideo = document.querySelector('#linkvideo')
+                const desc = document.querySelector('#desc');
+
+
+
+                //take gravatar value from Local Storage;
+                gravatar.value = localStorage.getItem('gravatar');
+                author.value = localStorage.getItem('author');
+
+
+
+
+
+                let keyId = ''; // Esta variable Global es el Id para Salvar la Actualizacion
+
+
+                // modelo de datos para almacenarlos con su Id
+
+                let myData = [];
+
+
+                // Events 
+                btnAddPost.addEventListener('click', addPost, false);
+                btnSaveEdit.addEventListener('click', saveEdit, false);
+
+
+
+
+
+            }
+
+            function saveEdit(e) {
+                const newDate = new Date();
+                let editPost = {
+                    title: title.value,
+                    desc: desc.value,
+                    date: newDate,
+                };
+
+                const postRef = dbRef.child('posts/' + keyId);
+
+                postRef.update(editPost);
+
+                clearForm();
+
+                btnSaveEdit.style.display = 'none';
+                btnAddPost.style.display = 'inline-block';
+
+                var conf = confirm('After Edition Resfresh the page');
+
+                e.preventDefault();
+            }
+
+            function addPost(e) {
+
+
+                // Firebase Database Reference and the child
+                // const dbRef = firebase.database().ref();
+                // const postsRef = dbRef.child('posts');
+                // const newFecha = new Date().toDateString().substr(0, 24);
+
+                const newFecha = new Date().toDateString().substr(0, 24);
+
+                /*
+                                class Comment {
+
+                                    constructor(name, avatar, comment, date) {
+                                        this.name = '';
+                                        this.avatar = '';
+                                        this.comment = '';
+                                        this.date = newFecha;
+                                    }
+                                }
+
+                */
+
+                let newPost = {
+                    author: author.value,
+                    gravatar: gravatar.value,
+                    title: title.value,
+                    linkvideo: linkvideo.value,
+                    desc: desc.value,
+                    fecha: newFecha,
+                    likes: 0,
+                    dislikes: 0,
+                    ncomment: 0,
+                    // comments: new Comment(),
+                    // comments: []
+                };
+
+
+
+
+                postsRef.push(newPost);
+
+
+                readPostData();
+
+                const postRefc = dbRef.child('posts/' + masterKey + '/comments/');
+                let defaultComment = {
+                    avatar: '',
+                    name: '',
+                    comment: '',
+                    date: ''
+                };
+                postRefc.push(defaultComment);
+
+
+                //Save Data in Local Storage
+
+                localStorage.setItem('gravatar', gravatar.value);
+                localStorage.setItem('author', author.value);
+
+                clearForm();
+
+
+
+
+
+
+
+
+                e.preventDefault();
+            }
+
+            function clearForm() {
+
+                author.value = '';
+                gravatar.value = '';
+                title.value = '';
+                linkvideo.value = '';
+                desc.value = '';
+
+                readPostData();
+
+
+            }
+
+            readPostData();
+
+            function readPostData() {
+
+                const postListUI = document.querySelector("#post-list");
+                postListUI.innerHTML = '';
+
+
+
+                postsRef.on("value", snap => {
+
+
+                    snap.forEach(childSnap => {
+
+                        let key = childSnap.key,
+                            value = childSnap.val();
+
+
+                        masterKey = key.trim();
+
+                        // create element Li
+
+                        const li = document.createElement('li');
+                        li.className = 'colletion-item';
+                        li.innerHTML =
+                            `
+            
+              <div class="card">
+              <h3> ${value.title} </h3>
+              <p> ${value.desc} </p>
+              <em id="mId"> ${key} </em>
+             
+              <a class="waves-effect waves-light btn" id="postEdit" onClick="editPost('${key}, ${value.author}, ${value.gravatar}, ${value.title}, ${value.desc}')">
+              
+              <i class="material-icons left">edit</i>Edit</a>
+              <a class="delete-item secondary-content btn red" onclick="onEliminar('${key}')">
+                <i class="fas fa-trash-alt"></i>
+               
+              </a>
+              </div>
+
+            `;
+
+                        postListUI.appendChild(li);
+
+                    });
+                });
+            }
+
+
+
+            function editPost(dataEdit) {
+
+                // console.log('Voy a editar');
+
+                btnAddPost.style.display = 'none';
+                btnSaveEdit.style.display = 'inline-block';
+
+
+                const arrData = dataEdit.split(',');
+
+                //  console.log(arrData);
+
+
+                keyId = arrData[0]; // Esta es la varibale Global que de declaro arriba. Que aqui se pasa para actualizar
+                author.value = arrData[1];
+                gravatar.value = arrData[2];
+                title.value = arrData[3];
+                desc.value = arrData[4];
+
+
+
+                const c = confirm('To Edit Go Top');
+            }
+
+
+
+
+
+
+
+            function removePost(e) {
+
+                //console.log(e.target.parentElement.parentElement.parentElement);
+                const s = e.target.parentElement.parentElement.parentElement;
+
+                const myId = s.querySelector('em').innerHTML;
+
+
+                if (e.target.parentElement.classList.contains('delete-item')) {
+                    if (confirm('Are You Sure')) {
+                        e.target.parentElement.parentElement.remove();
+
+                        removeFB(myId);
+                    }
+                }
+
+            }
+
+            function onEliminar(mk) {
+                // console.log('Voy a eliminar la llave', mk);
+                if (confirm('Are You Sure Denis')) {
+                    removeFB(mk);
+                }
+
+            }
+
+            function removeFB(myId) {
+                const postRef = dbRef.child(`posts/${myId.trim()}`);
+                //const postRef = dbRef.child('posts/-LK7tOe1D902yCWwrgOm');
+                postRef.remove();
+                readPostData();
+            }
+
+
+
+
+
+
+            window.addEventListener('load', iniciar, false);
+        </script>
+
+</body>
+
+</html>

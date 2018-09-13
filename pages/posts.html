@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+
+    <title>Posts</title>
+
+    <style>
+        h1 {
+            font-size: 3.5.em;
+            overflow: hidden;
+        }
+
+        h2 {
+            font-size: 3.0em;
+            overflow: hidden;
+        }
+
+        h3 {
+            font-size: 2.5em;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#home" class="brand-logo">
+                        <span class="logo">W</span>
+                        <span class="logo2">Developer</span>
+                    </a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse show-on-large right">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="home.html">
+                                <span>
+                                    <i class="material-icons ">home</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="courses.html">Courses</a>
+                        </li>
+                        <li>
+                            <a href="contact.html?#about">About us</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html?#contact">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="posts.html">
+                                Posts
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="myaccount.html">
+                                <span>
+                                    <i class="material-icons">account_circle</i>
+
+                                </span>
+                            </a>
+
+                        </li>
+                        <li style="text-align: center; padding-top: 8px;">
+                            <a href="myaccount.html">
+                                <img src="" id="pic-user" alt="" style="border-radius: 50%; height: 50px; z-index: -1;">
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <ul class="side-nav" id="mobile-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <div class="col s12 m12">
+                        <img src="#" alt="" width="100%" id="pic-user2" style="border-radius:0px; padding: 0px">
+                        <a href="#" id="fullNam" style="color:white;margin:0px;">
+                        </a>
+                    </div>
+                    <em id="cdx"></em>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </li>
+        <li>
+
+            <a href="home.html">
+                <span>
+                    <i class="material-icons teal-text">home</i> Home
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="courses.html">
+                <span>
+                    <i class="material-icons teal-text">business_center</i> Courses
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="contact.html?#about">
+                <span>
+                    <i class="material-icons teal-text">question_answer</i>
+                    About Us
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html?#contact">
+                <span>
+                    <i class="material-icons teal-text">email</i>
+                    Contact
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="posts.html">
+                <span>
+                    <i class="material-icons teal-text">chat</i>
+                    Posts
+                </span>
+            </a>
+
+        </li>
+
+        <li>
+            <a href="myaccount.html">
+                <span>
+                    <i class="material-icons teal-text">account_circle</i>
+                    My Account
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <div class="user-view">
+                <div class="">
+                    <div class="col s12 m12">
+
+                    </div>
+                </div>
+        </li>
+    </ul>
+
+
+    <!-- Section Main-->
+
+    <section class="section section-main">
+        <div class="container">
+            <div class="post" id="posts">
+
+                <div class="card">
+
+                    <div class="col s12 m12">
+                        <h3 align="center" style="text-shadow: 3px 2px 2px red;">Posts and Much More... </h3>
+                    </div>
+
+                    <div class="col s12 m12">
+                        <ul id="post-list" class="collection"></ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <hr>
+            <div id="postDetail" class="col s12 m12">
+
+                <h3 id="postTitle" class="col s12 m12">
+
+                    <p id="postdetail"></p>
+
+                    <a href="#posts" class="btn">Go Top</a>
+                    <a href="home.html" class="btn black">Back Home</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="section teal darken-2 white-text center">
+        <p class="flow-text" style="text-align: center">Web Developer (TD) &copy; 2018</p>
+    </footer>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script src="../js/posts.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            // Init Side nav
+            $('.button-collapse').sideNav();
+
+            $('#pic-user').attr('src', localStorage.getItem('pic'));
+            $('#pic-user2').attr('src', localStorage.getItem('pic'));
+
+
+
+            // Init Carousel
+            $(document).ready(function () {
+                $('.carousel').carousel();
+            });
+
+
+            // Init Scrollspy
+            $('.scrollspy').scrollSpy();
+
+
+
+            $('#pic-user').attr('src', localStorage.getItem('pic'));
+
+
+
+
+
+
+        });
+
+
+        // Contenedor dela Description READ More del Post Seleccionado.
+        class PostDetalle {
+            constructor(id, author, title, linkvideo, desc, gravatar, date, like, dislike, ncomment) {
+                this.id = id;
+                this.author = author;
+                this.title = title;
+                this.linkvideo = linkvideo;
+                this.desc = desc;
+                this.gravatar = gravatar;
+                this.date = date;
+                this.likes = likes;
+                this.dislikes = dislikes;
+                this.ncomment = ncomment;
+            }
+        }
+
+        postDetalle = {};
+        postArrayDetalle = [];
+
+        nComments = 0;
+
+
+        function iniciar() {
+
+
+            // Load the data from the localstorage
+            vfn = localStorage.getItem('fullName');
+            vcd = localStorage.getItem('credential');
+            vpic = localStorage.getItem('pic');
+
+            if (vfn === null) {
+
+            } else {
+
+            }
+
+            // Declar Vars Global
+
+            class comments {
+                constructor(name, gravatar, date, comment) {
+                    this.name = name,
+                        this.gravatar = gravatar;
+                    this.date = date;
+                    this.comment = comment;
+                }
+            }
+
+            // Firebase Database Reference and the child
+            const dbRef = firebase.database().ref();
+            const postsRef = dbRef.child('posts');
+
+            postsRef.on("value", snap => {
+
+                myPostsObject = {
+                    id: '',
+                    author: '',
+                    gravatar: '',
+                    date: '',
+                    title: '',
+                    linkvideo: '',
+                    desc: '',
+                    likes: 0,
+                    dislikes: 0,
+                    ncomment: 0,
+                    comments: new comments(),
+                };
+                myPostsArray = [];
+
+
+                snap.forEach(childSnap => {
+
+                    let key = childSnap.key,
+                        value = childSnap.val();
+
+                    myPostsObject = {
+                        id: key,
+                        date: value.fecha,
+                        title: value.title,
+                        linkvideo: value.linkvideo,
+                        desc: value.desc,
+                        author: value.author,
+                        gravatar: value.gravatar,
+                        likes: value.likes,
+                        dislikes: value.dislikes,
+                        ncomment: value.ncomment,
+                        comments: value.comments
+
+                    };
+
+                    myPostsArray.push(myPostsObject);
+
+                });
+
+                // UI vars
+                const postListUI = document.querySelector('#post-list');
+                postListUI.innerHTML = '';
+
+                const postTitle = document.getElementById('postTitle');
+                const postdetail = document.getElementById('postdetail');
+
+                i = 0;
+                do {
+
+                    id = myPostsArray[i].id;
+                    title = myPostsArray[i].title;
+                    linkvideo = myPostsArray[i].linkvideo;
+                    desc = myPostsArray[i].desc;
+                    date = myPostsArray[i].date;
+                    gravatar = myPostsArray[i].gravatar;
+                    author = myPostsArray[i].author;
+                    likes = myPostsArray[i].likes;
+                    dislikes = myPostsArray[i].dislikes;
+                    ncomment = myPostsArray[i].ncomment;
+
+
+
+                    postDetalle = new PostDetalle(id, author, title, linkvideo, desc, gravatar, date, likes,
+                        dislikes, ncomment);
+
+                    postArrayDetalle.push(postDetalle);
+
+
+                    // create element Li
+                    const li = document.createElement('li');
+                    li.className = 'collection-item avatar';
+                    let template =
+                        `
+                 <div class="card">
+                      <h3> ${title}</h3>
+                     
+                      <img src='${gravatar}' id='pic' style="border-radius:50%; float:left; margin-right: 15px;" /> 
+                      <span class="title">${title}</span>
+                      <p>Author: ${author} <br> Date Posted: ${date}</p>
+                      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        
+                   
+                      </br>
+                      </br>
+                      <a href ="#postDetail" class="btn s12 m12" onClick="idPost('${id}')">
+                            <i class="material-icons white-text s12 m4">import_contacts</i>  Read More
+                      </a>
+
+                      
+                      <a href ="#" class="btn-flat disabled s12">
+                            <i class="material-icons black-text s2 ">comment</i> Comments <span class="badge s8" style='color:black'>${ncomment}</span> 
+                      </a>
+                      <a href ="#" class="btn btn-flat disabled s12 m4">
+                            <i class="material-icons green-text s6 m4">thumb_up</i><span class="badge s6 m6" style='color:black'>${likes}</span> 
+                      </a>
+                      <a href ="#" class="btn btn-flat disabled s12 m6">
+                            <i class="material-icons red-text s6">thumb_down</i><span class="badge s6" style='color:black'>${dislikes}</span> 
+                      </a>
+
+                 </div>
+            `;
+
+
+                    li.innerHTML = template;
+                    postListUI.appendChild(li);
+
+                    i++;
+                } while (i <= myPostsArray.length - 1);
+
+            });
+        }
+
+        function idPost(id) {
+
+            myObj = {
+                id: '',
+                author: '',
+                gravatar: '',
+                title: '',
+                linkvideo: '',
+                desc: '',
+                date: '',
+                likes: '',
+                dislikes: '',
+                ncomment: '',
+            };
+
+
+            for (i = 0; i <= postArrayDetalle.length - 1; i++) {
+
+                if (postArrayDetalle[i].id === id) {
+                    myObj = {
+                        id: postArrayDetalle[i].id,
+                        author: postArrayDetalle[i].author,
+                        gravatar: postArrayDetalle[i].gravatar,
+                        title: postArrayDetalle[i].title,
+                        linkvideo: postArrayDetalle[i].linkvideo,
+                        desc: postArrayDetalle[i].desc,
+                        date: postArrayDetalle[i].date,
+                        likes: postArrayDetalle[i].likes,
+                        dislikes: postArrayDetalle[i].dislikes,
+                        ncomment: postArrayDetalle[i].ncomment,
+                    };
+
+
+                    postDetail = document.getElementById('postDetail');
+                    const postSelected = document.createElement('div');
+
+                    postDetail.innerHTML = '';
+
+                    postSelected.innerHTML =
+                        `
+<div id="postDetail">
+  <div class="card" style="border:1px solid black;  box-shadow: 3px 2px 3px gray;">
+    <h3>${myObj.title}</h3>
+    <hr>
+    <div class="col s12" style="text-align: center">
+      <iframe id="myVideo" width="100%" height="40%" src="${myObj.linkvideo}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    </div>
+
+
+    <img id="picture" src="${myObj.gravatar}" alt="no hay imagen" style="border-radius:50%; float:left; margin-right: 15px;" />
+    <p>Author: ${myObj.author}</p>
+
+
+    <span class="title">Date Posted: ${myObj.date} </span>
+    <p>
+        ${myObj.desc}
+    </p>
+
+    <br>
+
+    <a href="#posts" class="btn blue" onclick="onLike('${myObj.id},  ${myObj.likes}')">
+      <i class="fas fa-thumbs-up"></i>
+    </a>
+    <a href="#posts" class="btn red" onclick="onDislike('${myObj.id}, ${myObj.dislikes}')">
+      <i class="fas fa-thumbs-down"></i>
+    </a>
+
+  </div>
+  <hr>
+  <p> Comments </p>
+  <hr>
+  <div class="card" >
+  <ul class="collection" id="miscomentarios"> </ul> 
+  </card>
+   `;
+
+                    postDetail.appendChild(postSelected);
+
+                    const insertComments = document.querySelector('#miscomentarios');
+
+                    const ifr = document.querySelector('#myVideo');
+
+
+                    if (myObj.linkvideo !== '') {
+                        // const ifr = document.querySelector('#myVideo');
+                        ifr.style.display = 'block';
+                        ifr.style.height = '400px';
+                    } else {
+                        //  const ifr = document.querySelector('#myVideo');
+                        ifr.style.display = 'none';
+                        ifr.style.height = '40px';
+                    }
+
+
+                    const cKeyc = myObj.id;
+                    const cKey = cKeyc.trim();
+                    const dbRef = firebase.database().ref();
+
+
+
+                    // postsRef.push(newPost);
+
+                    const comentarios = `posts/${cKey}/comments`;
+                    const commentsRef = dbRef.child(comentarios);
+
+
+                    // console.log('Comentarios', commentsRef);
+
+
+                    comenta = [];
+                    commentsRef.on("value", snap => {
+
+
+
+                        snap.forEach(childSnap => {
+                            let key = childSnap.key,
+                                value = childSnap.val();
+
+                            // console.log('Valor de la llave', key);
+                            comenta.push(value);
+                        });
+
+                        let i = 0;
+                        do {
+
+                            const cli = document.createElement('li');
+                            cli.innerHTML = '';
+                            cli.innerHTML =
+                                `<li> <img src='${comenta[i].avatar}'  class='circle' /><p>${comenta[i].date}</p> <p> ${comenta[i].comment}</p></il>`;
+                            insertComments.appendChild(cli);
+                            i++;
+
+                        } while (i <= comenta.length - 1);
+
+
+                        //nComments = i;
+
+                        const newCommentF = document.createElement('div');
+
+                        // console.log(comenta);
+
+                        const templateAddComment =
+                            `
+                        <div class="card" style="border:1px solid black;">
+
+<form class="col s12">
+  <div class="row">
+    <div class="col s12">
+      Name or Email:
+      <div class="input-field inline">
+        <input id="name" type="text" class="validate" required>
+        <label for="name">Name or Email Address</label>
+        <span class="helper-text" data-error="wrong" data-success="right">Just to show in the comment</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        Your Avatar Link:
+        <div class="input-field inline">
+          <input id="avatarlink" type="text" class="validate">
+          <label for="avatarlink">Link of Avatar Location</label>
+          <blockquote>
+                <em> Get your avatar in https://en.gravatar.com/ and subscribe</em>
+          </blockquote>
+         
+          <span class="helper-text" data-error="wrong" data-success="right"></span>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="texto" class="materialize-textarea" required ></textarea>
+          <label for="texto">Type your comment</label>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="submit" id="tcoment" onClick="onClickAddComment()" class="btn green" value="Submit" />
+        </div>
+      </div>
+</form>
+</div>
+
+ <hr>
+            <div id="postDetail">
+                <h3 id="postTitle">
+                    </h1>
+                    <p id="postdetail"></p>
+
+                    <a href="#posts" class="btn">Go Top</a>
+                    <a href="home.html" class="btn black">Back Home</a>
+            </div>
+                        `
+                        newCommentF.innerHTML = '';
+
+                        newCommentF.innerHTML = templateAddComment;
+
+                        postDetail.appendChild(newCommentF);
+
+
+
+                    });
+                }
+            }
+
+        }
+
+        // NOTA IMPORTANTE : Cuando uso la forma generada solo puedo usar el evento onClick y no necesito e.preventDefault 
+
+        function onClickAddComment(e) {
+
+            let fieldName = document.querySelector('#name');
+            let fieldAvatar = document.querySelector('#avatarlink');
+            let fieldComent = document.querySelector('#texto');
+
+
+            // validate the data
+            //console.log('Validar Name y comentario', fieldName.value, fieldComent.value);
+
+            if (fieldName.value === '' || fieldComent.value === '') {
+                var msg = alert('Sorry, but Field Name and Field Comment Should have a value');
+                return;
+            }
+
+
+
+
+
+
+            let keyPost = myObj.id;
+
+            let nKey = keyPost.trim();
+
+
+
+
+            const dbRef = firebase.database().ref();
+            //const postsRef = dbRef.child('posts');
+
+            let path = `posts/${nKey}/comments`;
+            const postsRef = dbRef.child(path);
+            //const postsRef = dbRef.child('posts/' + keyPost + '/comments/');
+
+
+            //const postsRef = dbRef.child(`posts/-LKCwkAfCaLIOwPO9v3a/comments/`);
+            const date = new Date().toDateString().substr(0, 24);
+
+            let newComment = {
+                name: fieldName.value,
+                comment: fieldComent.value,
+                avatar: fieldAvatar.value,
+                date: date
+            };
+            postsRef.push(newComment);
+
+
+            postDetail.innerHTML = '';
+
+
+            // iniciar();
+
+            // e.preventDefault();
+
+            // Actualizar Total of Comments DB
+            nCommentfn(myObj.id);
+
+
+
+        }
+
+
+
+        function nCommentfn(myIdComment) {
+            // console.log('NUMERO DE COMENTARIOS PARA ', myIdComment);
+            let nkey = myIdComment.trim();
+            const dbRefc = firebase.database().ref();
+            const postsRefc = dbRefc.child('posts/' + nkey);
+            const updateComment = {
+                ncomment: parseInt(ncomment) + 1
+            }
+            postsRefc.update(updateComment);
+
+        }
+
+        function onLike(myIdLikes) {
+            var temp = myIdLikes.split(',');
+            let id = temp[0];
+            let likes = temp[1];
+
+            // Firebase Database Reference and the child
+            const dbRef0 = firebase.database().ref();
+            const postsRef0 = dbRef0.child('posts/' + id);
+            const updateLike = {
+                likes: parseInt(likes) + 1
+            }
+            postsRef0.update(updateLike);
+        }
+
+        function onDislike(myIdDislikes) {
+            var temp = myIdDislikes.split(',');
+            let id = temp[0];
+            let dislikes = temp[1];
+            // console.log('No Te Gusta?', id, dislikes);
+            // Firebase Database Reference and the child
+            const dbRef0 = firebase.database().ref();
+            const postsRef0 = dbRef0.child('posts/' + id);
+            const updateDLike = {
+                dislikes: parseInt(dislikes) + 1
+            }
+            postsRef0.update(updateDLike);
+        }
+
+
+        function goFormComenta() {
+            // console.log('Estoy en la funcion GoFormComenta');
+        }
+
+
+
+
+        window.addEventListener('load', iniciar, false);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Developer (TD)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/animation.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    .parallax-container {
+      height: 500px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="img/p2.jpg">
+    </div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Parallax</h2>
+      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground
+        content while scrolling.</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="img/p3.jpg">
+    </div>
+  </div>
+
+  <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="" alt="" class="circle" id="p1">
+      <span class="title">Title</span>
+      <p>First Line
+        <br> Second Line
+      </p>
+      <a href="#!" class="secondary-content">
+        <i class="material-icons">grade</i>
+      </a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle">folder</i>
+      <span class="title">Title</span>
+      <p>First Line
+        <br> Second Line
+      </p>
+      <a href="#!" class="secondary-content">
+        <i class="material-icons">grade</i>
+      </a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">insert_chart</i>
+      <span class="title">Title</span>
+      <p>First Line
+        <br> Second Line
+      </p>
+      <a href="#!" class="secondary-content">
+        <i class="material-icons">grade</i>
+      </a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">play_arrow</i>
+      <span class="title">Title</span>
+      <p>First Line
+        <br> Second Line
+      </p>
+      <a href="#!" class="secondary-content">
+        <i class="material-icons">grade</i>
+      </a>
+    </li>
+  </ul>
+
+
+  <footer>
+    <p>TECHLAUNCH at Florida Vocational Institute
+      <br> PIPELINE Doral - 8400 NW 36th Street #450 Doral, Florida 33166</p>
+  </footer>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.parallax').parallax();
+      $('#p1').attr('src', 'img/p3.jpg');
+    });
+
+    /*
+    function readComments() {
+            postsRef.on("value", snap => {
+                        snap.forEach(childSnap => {
+                                let key = childSnap.key,
+                                    value = childSnap.val();
+                            }
+                        }
+
+    */
+  </script>
+
+
+
+</html>
+
+
+
+
+
+
+
+// postTitle.innerHTML = title; postDetail = document.getElementById('postDetail'); const vide = document.createElement('div');
+postDetail.innerHTML = ''; vide.innerHTML = `
+<div id="postDetail">
+  <div class="card" style="border:1px solid black;  box-shadow: 3px 2px 3px gray;">
+    <h3>${myArray[2]}</h3>
+    <hr>
+    <div class="col s12" style="text-align: center">
+      <iframe width="1028" height="40" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    </div>
+
+
+    <img id="picture" src="${myArray[4]}" alt="no hay imagen" style="border-radius:50%; float:left; margin-right: 15px;" />
+    <p>Author: ${vfn} </p>
+
+
+    <span class="title">Date Posted: ${myArray[5]}</span>
+    <p>
+      <br> ${myArray[3]}
+    </p>
+
+
+
+
+
+    <br>
+
+    <a href="#posts" class="btn blue">
+      <i class="fas fa-thumbs-up"></i>
+    </a>
+    <a href="#posts" class="btn red">
+      <i class="fas fa-thumbs-down"></i>
+    </a>
+
+  </div>
+  <hr>
+  <p> Comments </p>
+  <hr>
+  <ul class="collection"> </ul>
+
+
+
+
+  <li> ${comenta[0].name}
+
+    <p> Testing... </p>
+    <hr>
+  </li>
+  <li> Peter
+    <p> It is awesome.. </p>
+    <hr>
+  </li>
+  <li> Mary
+    <p> No comments. </p>
+    <hr>
+  </li>
+
+
+
+  </ul>
+
+
+
+
+  <div class="card" style="border:1px solid black;">
+
+    <form class="col s12">
+
+
+      <div class="row">
+        <div class="col s12">
+          Name or Email:
+          <div class="input-field inline">
+            <input id="name" type="text" class="validate">
+            <label for="name">Name or Email Address</label>
+            <span class="helper-text" data-error="wrong" data-success="right">Just to appair in the comment</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            Your Avatar Link:
+            <div class="input-field inline">
+              <input id="avatarlink" type="text" class="validate">
+              <label for="avatarlink">Link of Avatar Location</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Just to show your avatar picture in the comment</span>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="texto" class="materialize-textarea"></textarea>
+              <label for="texto">Type your comment</label>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="submit" id="tcoment" onClick="onClickAddComment()" class="btn green" value="Submit" />
+            </div>
+          </div>
+
+
+
+
+    </form>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+</form>
+
+<br>
+<br>
+
+
+<a href="#posts" class="btn black">Go Back </a>
+<a href="home.html" class="btn">Back Home</a>
+</div>
+`; postDetail .appendChild(vide); iniciar(); //const picture = document.querySelector('#picture'); // picture.setAttribute('src',
+`${myArray[1]}`); //picture.style.display = 'none'; }
+
+
+
+
+
+
+
+
+
+
+
+<iframe width="50%" height="578" src="https://www.youtube.com/embed/wvR40su_XBM?list=PLr6-GrHUlVf_ZNmuQSXdS197Oyr1L9sPB"
+  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+09oErCBjVns
